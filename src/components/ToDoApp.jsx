@@ -151,16 +151,17 @@ const ToDoApp = () => {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, ease: "easeInOut" }}
-                className={`w-full h-full max-w-6xl ${darkMode ? "bg-gray-800" : "bg-white"
+                className={`w-full h-full max-w-6x2 ${darkMode ? "bg-gray-800" : "bg-white"
                     } shadow-2xl rounded-3xl p-10 overflow-y-auto`}
             >
                 <div className="flex justify-between items-center mb-6">
-                    <h1
-                        className={`text-4xl font-extrabold text-center tracking-wide ${darkMode ? "text-white" : "text-gray-800"
-                            }`}
+                    <h2
+                        className={`text-4xl font-bold text-center tracking-wide relative whitespace-nowrap overflow-hidden w-max
+        ${darkMode ? "text-white" : "text-gray-800"} typing-animation`}
                     >
-                        📝 To-Do App
-                    </h1>
+                        📝 <span className="inline-block">To Do App...</span>
+                    </h2>
+
                     <motion.button
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
